@@ -1,0 +1,11 @@
+[Desktop Entry]  
+Encoding=UTF-8  
+Name=Name  
+Categories=Category Name  
+Exec=java -jar /home/cm/NetBeansProjects/MySchedule/dist/MySchedule.jar
+Icon=/usr/share/folder/*.png  
+StartupNotify=false  
+Terminal=false  
+Type=Application  
+Comment=Application Name  
+StartupWMClass=Class 

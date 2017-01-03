@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Activities List" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="511" leftMargin="28" rightMargin="56" topMargin="28" bottomMargin="28" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fromDate" class="java.lang.String"/>
+	<parameter name="toDate" class="java.lang.String"/>
+	<field name="Centre" class="java.lang.String"/>
+	<field name="Time" class="java.lang.String"/>
+	<field name="Date" class="java.lang.String"/>
+	<field name="Group" class="java.lang.String"/>
+	<field name="Activity" class="java.lang.String"/>
+	<field name="Subject" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="511" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu" size="14"/>
+				</textElement>
+				<text><![CDATA[Activities List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="13" width="27" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[From]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="13" width="14" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[To]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="38" y="13" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fromDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="13" width="61" height="13"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{toDate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="30" width="510" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="8" width="510" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[Subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="181" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[Activity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="0" width="66" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[Group]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="0" width="71" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="70" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="0" width="43" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu"/>
+				</textElement>
+				<text><![CDATA[Centre]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="14"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="181" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Activity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="66" height="14"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Group}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="71" height="14"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="70" height="14"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="0" width="43" height="14"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Centre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
